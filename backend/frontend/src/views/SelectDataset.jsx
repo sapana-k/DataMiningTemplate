@@ -3,7 +3,7 @@ import {Button, Form, FormGroup, Label, Input } from "reactstrap";
 import axios from 'axios';
 
 const SelectDataset = () => {
-    const [statistics, setStatistics] = useState({ mean: null});
+    const [statistics, setStatistics] = useState({ acc: null});
     
     const handleChange = async(e) => {
         console.log("this is chosen", e.target.value)
@@ -46,7 +46,7 @@ const SelectDataset = () => {
       </Input>
       </FormGroup>
       {/* <Button className="mt-2" onSubmit={handleCalculation}>Submit</Button> */}
-      <p>{statistics.mean}</p>
+      <p>Accuracy = {statistics.acc}</p>
     </Form>
     </div>
   )
